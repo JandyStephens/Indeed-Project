@@ -1,20 +1,22 @@
 import React from "react";
 import MedText from "../../MedText";
 import QuestionCounter from "../QuestionCounter";
-import ScoreTracker from "../../ScoreTracker";
-import Button from "../../Button";
-import { useLinkClickHandler } from "react-router-dom";
+import SingleAnswerForm from "../../SingleAnswerForm";
 
 const QuestionTwo = (props) => {
-  const handleClick = useLinkClickHandler("/questionThree");
   return (
     <div>
       <MedText>
         <QuestionCounter>2</QuestionCounter>
-        <ScoreTracker>{props.tracker}</ScoreTracker>
       </MedText>
-      <p>Q2</p>
-      <Button onClick={handleClick} buttonText={<p>Submit</p>}></Button>
+      <SingleAnswerForm
+        question="In 2014 the Guinness Book of World Records awarded the title of “most expensive hot dog commercially available” to a restaurant in which city?"
+        radioButtonText1="New York"
+        radioButtonText2="Chicago"
+        radioButtonText3="Seattle"
+        radioButtonText4="Los Angeles"
+        nextPage="/questionThree"
+      ></SingleAnswerForm>
     </div>
   );
 };

@@ -1,20 +1,22 @@
 import React from "react";
 import MedText from "../../MedText";
 import QuestionCounter from "../QuestionCounter";
-import ScoreTracker from "../../ScoreTracker";
-import Button from "../../Button";
-import { useLinkClickHandler } from "react-router-dom";
+import SingleAnswerForm from "../../SingleAnswerForm";
 
 const QuestionThree = (props) => {
-  const handleClick = useLinkClickHandler("/questionFour");
   return (
     <div>
       <MedText>
         <QuestionCounter>3</QuestionCounter>
-        <ScoreTracker>{props.tracker}</ScoreTracker>
       </MedText>
-      <p>Q3</p>
-      <Button onClick={handleClick} buttonText={<p>Submit</p>}></Button>
+      <SingleAnswerForm
+        question="Who invented the pinball 'tilt' mechanism?"
+        radioButtonText1="Betty Flack"
+        radioButtonText2="Harry Williams"
+        radioButtonText3="Charles Dunn"
+        radioButtonText4="Seamus Flannigan"
+        nextPage="/questionFour"
+      ></SingleAnswerForm>
     </div>
   );
 };

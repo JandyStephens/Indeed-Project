@@ -45,10 +45,6 @@ To import the file in Figma, download the [Trivia-game-Figma-design.fig](https:/
   - After the final question, the user is sent to the results screen. The screen includes the current score, high score and the date they achieved the high score. Messaging on the screen should change based on the user’s score.
     - Design: [Final-Score.png](./Final-Sorce.png) or Figma Final Score board.
 
-## How to clone the game
-
-Open the CodeSandbox template and save to create your own unique fork.
-
 ## How to submit your game
 
 Send the URL for your saved fork to your Indeed recruiter.

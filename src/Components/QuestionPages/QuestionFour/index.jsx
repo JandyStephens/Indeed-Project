@@ -2,19 +2,24 @@ import React from "react";
 import MedText from "../../MedText";
 import QuestionCounter from "../QuestionCounter";
 import ScoreTracker from "../../ScoreTracker";
-import Button from "../../Button";
-import { useLinkClickHandler } from "react-router-dom";
+import SingleAnswerForm from "../../SingleAnswerForm";
 
 const QuestionFour = (props) => {
-  const handleClick = useLinkClickHandler("/questionFive");
   return (
     <div>
       <MedText>
         <QuestionCounter>4</QuestionCounter>
         <ScoreTracker>{props.tracker}</ScoreTracker>
       </MedText>
-      <p>Q4</p>
-      <Button onClick={handleClick} buttonText={<p>Submit</p>}></Button>
+      <SingleAnswerForm
+        question="?"
+        radioButtonText1="Job seeker first"
+        radioButtonText2="Pay per performance"
+        radioButtonText3="Data driven"
+        radioButtonText4="Innovation"
+        radioButtonText5="Inclusion+Belonging"
+        nextPage="/questionFive"
+      ></SingleAnswerForm>
     </div>
   );
 };
