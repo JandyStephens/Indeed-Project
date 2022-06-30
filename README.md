@@ -2,7 +2,7 @@
 
 You have been assigned a new trivia game prototype. Your task is to build a fully functional experience that meets the requirements below.
 
-You received a partial, rough design. It is missing some layouts, features, and design details. As you develop the game, add those missing aspects in your prototype by extending the theme in the provided designs. You may also augment your own features or break away from the theme entirely reskinning the experience if you like. Consider features not included in the design such as a timer to impress us.
+You received a partial, rough design. It is missing some layouts, features, and design details. As you develop the game, add those missing aspects in your prototype by extending the theme in the provided designs. You may also augment your own features or break away from the theme entirely reskinning the experience if you like. Consider features not included in the design such as a timer.
 
 ## Guideline for completing the exercise
 
@@ -15,7 +15,7 @@ You received a partial, rough design. It is missing some layouts, features, and 
   - It should be responsive and accessible.
   - You may edit any file in the project, and add any assets you require.
   - You may look up anything you like.
-  - Any of the following languages, frameworks and packages are permitted but are not required. If you would like to use anything outside of this list, please contact your recruiter with the package name, link and reason you require it.
+  - Any of the following languages, frameworks and packages are permitted but are not required.
     - JavaScript / TypeScript
     - React
     - CSS / Sass
@@ -26,7 +26,6 @@ You received a partial, rough design. It is missing some layouts, features, and 
       - [ThemeUI](https://theme-ui.com/)
     - Redux
     - React Router
-  - Your finished code should be of a quality that you would submit to your peers for a code review.
 
 ## Designs
 
@@ -44,7 +43,3 @@ To import the file in Figma, download the [Trivia-game-Figma-design.fig](https:/
 - Results:
   - After the final question, the user is sent to the results screen. The screen includes the current score, high score and the date they achieved the high score. Messaging on the screen should change based on the user’s score.
     - Design: [Final-Score.png](./Final-Sorce.png) or Figma Final Score board.
-
-## How to submit your game
-
-Send the URL for your saved fork to your Indeed recruiter.
