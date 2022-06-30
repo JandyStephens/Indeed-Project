@@ -1,8 +1,7 @@
 import React from "react";
-import { useLinkClickHandler } from "react-router-dom";
 import CustomButton from "../CustomButton";
 
-function SingleAnswerForm(props) {
+function MultiAnswerForm(props) {
   const handleSubmit = (e) => {
     e.preventDefault();
   };
@@ -16,27 +15,27 @@ function SingleAnswerForm(props) {
       <label>{props.question}</label>
       <br />
       <label>
-        <input type="radio" name="oneAnswerRadioForm" value="option1" />
+        <input type="checkbox" name="answer1" value="option1" />
         {props.radioButtonText1}
       </label>
       <br />
       <label>
-        <input type="radio" name="oneAnswerRadioForm" value="option2" />
+        <input type="checkbox" name="answer2" value="option2" />
         {props.radioButtonText2}
       </label>
       <br />
       <label>
-        <input type="radio" name="oneAnswerRadioForm" value="option3" />
+        <input type="checkbox" name="answer3" value="option3" />
         {props.radioButtonText3}
       </label>
       <br />
       <label>
-        <input type="radio" name="oneAnswerRadioForm" value="option4" />
+        <input type="checkbox" name="answer4" value="option4" />
         {props.radioButtonText4}
       </label>
       <br />
       <label>
-        <input type="radio" name="oneAnswerRadioForm" value="option5" />
+        <input type="checkbox" name="answer5" value="option5" />
         {props.radioButtonText5}
       </label>
       <br />
@@ -47,4 +46,4 @@ function SingleAnswerForm(props) {
   );
 }
 
-export default SingleAnswerForm;
+export default MultiAnswerForm;

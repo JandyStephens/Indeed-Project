@@ -1,7 +1,7 @@
 import React from "react";
 import MedText from "../../MedText";
 import QuestionCounter from "../QuestionCounter";
-import ScoreTracker from "../../ScoreTracker";
+// import ScoreTracker from "../../ScoreTracker";
 import SingleAnswerForm from "../../SingleAnswerForm";
 
 const QuestionFive = (props) => {
@@ -9,14 +9,16 @@ const QuestionFive = (props) => {
     <div>
       <MedText>
         <QuestionCounter>5</QuestionCounter>
-        <ScoreTracker>{props.tracker}</ScoreTracker>
+        {/* <ScoreTracker>{props.tracker}</ScoreTracker> */}
       </MedText>
       <SingleAnswerForm
-        question="?"
-        radioButtonText1=""
-        radioButtonText2=""
-        radioButtonText3=""
-        radioButtonText4=""
+        question="79% of employees believe that it is important to have what in the
+        workplace?"
+        radioButtonText1="Fun"
+        radioButtonText2="Snacks and drinks provided"
+        radioButtonText3="Separate break area"
+        radioButtonText4="Motivation"
+        radioButtonText5="Respect"
         nextPage="/resultsPage"
       ></SingleAnswerForm>
     </div>

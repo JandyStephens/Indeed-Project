@@ -15,6 +15,7 @@ const QuestionThree = (props) => {
         radioButtonText2="Harry Williams"
         radioButtonText3="Charles Dunn"
         radioButtonText4="Seamus Flannigan"
+        radioButtonText5="Brian Stener"
         nextPage="/questionFour"
       ></SingleAnswerForm>
     </div>

@@ -15,6 +15,7 @@ const QuestionTwo = (props) => {
         radioButtonText2="Chicago"
         radioButtonText3="Seattle"
         radioButtonText4="Los Angeles"
+        radioButtonText5="Houston"
         nextPage="/questionThree"
       ></SingleAnswerForm>
     </div>
