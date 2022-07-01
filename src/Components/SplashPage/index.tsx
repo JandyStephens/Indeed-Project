@@ -28,7 +28,7 @@ const SplashPage = (props) => {
       <CustomButton
         // type="submit"
         // value="Log Name"
-        // onSubmit="handleSubmit"
+
         nextPage="/questionOne"
       >
         Let's Begin!

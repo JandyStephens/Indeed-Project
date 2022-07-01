@@ -7,7 +7,7 @@ const ResultsPage = (props) => {
     <div>
       <HeaderText>
         <p>
-          {props.playerName}, you got {props.finalScore} out of 5!
+          {props.playerName}, you scored {props.finalScore} out of 5!
         </p>
       </HeaderText>
       {/* V2 - Button takes you to first question instead of splashpage - Keep name */}

@@ -32,7 +32,18 @@ export default function App() {
           <Route path="/questionFive" element={<QuestionFive />} />
           <Route
             path="/resultsPage"
-            element={<ResultsPage playerName={playerName} />}
+            element={
+              <ResultsPage
+                playerName={playerName}
+                // onClick={() => setPlayerName(() => "")}
+                // onSubmit="resetPlayerName"
+                // onClick={playerName={""}}
+                // onChange={(e) => {
+                //   const resetPlayerName = { playerName: e.target.value };
+                //   setPlayerName("");
+                // }}
+              />
+            }
           />
         </Routes>
       </BrowserRouter>
