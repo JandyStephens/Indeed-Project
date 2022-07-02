@@ -13,7 +13,6 @@ const ResultsPage = (props) => {
       </p>
       {/* takes you to first question instead of splashpage - Keeps player name */}
       <CustomButton nextPage="/questionOne">Try Again</CustomButton>
-
       {/* takes you to splashpage to enter new name*/}
       <CustomButton nextPage="/">Play as New Person</CustomButton>
     </div>
