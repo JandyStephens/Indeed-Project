@@ -1,14 +1,14 @@
 import React from "react";
-import MedText from "../../MedText";
+import "../../../style.css";
 import QuestionCounter from "../QuestionCounter";
+import ScoreTracker from "../../ScoreTracker";
 import SingleAnswerForm from "../../SingleAnswerForm";
 
 const QuestionOne = (props) => {
   return (
     <div>
-      <MedText>
-        <QuestionCounter>1</QuestionCounter>
-      </MedText>
+      <QuestionCounter>1</QuestionCounter>
+      <ScoreTracker></ScoreTracker>
       <SingleAnswerForm
         question="The Mobile Phone Throwing World Championships take place in which country?"
         radioButtonText1="New Zealand"

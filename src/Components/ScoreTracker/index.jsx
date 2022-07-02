@@ -1,7 +1,8 @@
 import React from "react";
+import "../../style.css";
 
 const ScoreTracker = (props) => {
-  return <p className="scoreTracker">Score: {props.children}</p>;
+  return <div className="scoreTracker">Score: {props.children}</div>;
 };
 
 export default ScoreTracker;

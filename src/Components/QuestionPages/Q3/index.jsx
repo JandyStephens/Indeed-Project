@@ -1,14 +1,14 @@
 import React from "react";
-import MedText from "../../MedText";
+import "../../../style.css";
 import QuestionCounter from "../QuestionCounter";
+import ScoreTracker from "../../ScoreTracker";
 import SingleAnswerForm from "../../SingleAnswerForm";
 
 const QuestionThree = (props) => {
   return (
     <div>
-      <MedText>
-        <QuestionCounter>3</QuestionCounter>
-      </MedText>
+      <QuestionCounter>3</QuestionCounter>
+      <ScoreTracker></ScoreTracker>
       <SingleAnswerForm
         question="Who invented the pinball 'tilt' mechanism?"
         radioButtonText1="Betty Flack"

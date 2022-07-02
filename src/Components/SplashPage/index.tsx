@@ -1,12 +1,12 @@
 import React from "react";
-import HeaderText from "../HeaderText";
+import "../../style.css";
 import CustomButton from "../CustomButton";
 
 const SplashPage = (props) => {
   return (
-    <div>
-      <HeaderText className="splashPage">Trivia</HeaderText>
-      <p>
+    <div className="splashPage">
+      <h1 className="splashHeader">Trivia</h1>
+      <p className="instructions">
         Select the correct answer(s) to the following 5 questions. Your final
         score will be displayed at the end. Enjoy!
       </p>
@@ -28,7 +28,6 @@ const SplashPage = (props) => {
       <CustomButton
         // type="submit"
         // value="Log Name"
-
         nextPage="/questionOne"
       >
         Let's Begin!

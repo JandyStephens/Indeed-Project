@@ -1,6 +1,7 @@
 import React from "react";
 import { useLinkClickHandler } from "react-router-dom";
 import CustomButton from "../CustomButton";
+import "./style.css";
 
 function SingleAnswerForm(props) {
   const handleSubmit = (e) => {

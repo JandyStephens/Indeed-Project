@@ -1,0 +1,12 @@
+.value {
+  position: absolute;
+  width: 311px;
+  height: 24px;
+  left: calc(50% - 311px / 2 + 199.5px);
+  top: 182px;
+
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  color: #2d2d2d;
+}

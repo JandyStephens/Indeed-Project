@@ -1,12 +1,12 @@
 import React from "react";
 import { BrowserRouter, Route, Routes, Link } from "react-router-dom";
-// import "./style.css";
+import "./style.css";
 import SplashPage from "./Components/SplashPage";
-import QuestionOne from "./Components/QuestionPages/QuestionOne";
-import QuestionTwo from "./Components/QuestionPages/QuestionTwo";
-import QuestionThree from "./Components/QuestionPages/QuestionThree";
-import QuestionFour from "./Components/QuestionPages/QuestionFour";
-import QuestionFive from "./Components/QuestionPages/QuestionFive";
+import QuestionOne from "./Components/QuestionPages/Q1/index";
+import QuestionTwo from "./Components/QuestionPages/Q2/index";
+import QuestionThree from "./Components/QuestionPages/Q3/index";
+import QuestionFour from "./Components/QuestionPages/Q4/index";
+import QuestionFive from "./Components/QuestionPages/Q5/index";
 import ResultsPage from "./Components/ResultsPage";
 
 export default function App() {

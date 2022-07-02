@@ -34,14 +34,8 @@ function MultiAnswerForm(props) {
         {props.radioButtonText4}
       </label>
       <br />
-      <label>
-        <input type="checkbox" name="answer5" value="option5" />
-        {props.radioButtonText5}
-      </label>
-      <br />
-      <CustomButton nextPage={props.nextPage}>
-        Show Me the Correct Answer
-      </CustomButton>
+
+      <CustomButton nextPage={props.nextPage}>Next Question</CustomButton>
     </form>
   );
 }
