@@ -25,13 +25,6 @@ const SplashPage = (props) => {
         />
       </form>
       <br />
-      <CustomButton
-        // type="submit"
-        // value="Log Name"
-        nextPage="/questionOne"
-      >
-        Let's Begin!
-      </CustomButton>
     </div>
   );
 };
