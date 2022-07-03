@@ -15,6 +15,8 @@ const QPageLayout = (props) => {
         radioButtonText3={props.radioButtonText3}
         radioButtonText4={props.radioButtonText4}
         nextPage={props.nextPage}
+        onChange={props.onChange}
+        value={props.value}
       ></SingleAnswerForm>
     </div>
   );

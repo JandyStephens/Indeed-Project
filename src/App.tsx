@@ -9,6 +9,7 @@ import CustomButton from "./Components/CustomButton";
 
 export default function App(props) {
   const [playerName, setPlayerName] = React.useState("");
+  const [values, setValues] = React.useState({});
 
   return (
     <div>
@@ -40,16 +41,24 @@ export default function App(props) {
                 <QPageLayout
                   counter={index + 1}
                   scoreTracker="To-Do"
-                  question={eachQuestion.q}
-                  radioButtonText1={eachQuestion.c[0]}
-                  radioButtonText2={eachQuestion.c[1]}
-                  radioButtonText3={eachQuestion.c[2]}
-                  radioButtonText4={eachQuestion.c[3]}
+                  question={eachQuestion.question}
+                  radioButtonText1={eachQuestion.choice[0]}
+                  radioButtonText2={eachQuestion.choice[1]}
+                  radioButtonText3={eachQuestion.choice[2]}
+                  radioButtonText4={eachQuestion.choice[3]}
                   nextPage={
                     index === questions.length - 1
                       ? "/resultsPage"
                       : `/question${index + 2}`
                   }
+                  onChange={(e) => {
+                    setValues(({ ...previousValue }) => {
+                      previousValue[index] = e.target.value;
+
+                      return previousValue;
+                    });
+                  }}
+                  value={values[index]}
                 />
               }
             />

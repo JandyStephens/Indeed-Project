@@ -2,40 +2,43 @@ import React from "react";
 
 const questions = [
   {
-    q: "The Mobile Phone Throwing World Championships take place in which country?",
-    c: ["New Zealand", "The United States", "Finland", "Japan"],
-    a: "",
+    question:
+      "The Mobile Phone Throwing World Championships take place in which country?",
+    choice: ["New Zealand", "The United States", "Finland", "Japan"],
+    answer: "",
   },
   {
-    q: "In 2014 the Guinness Book of World Records awarded the title of “most expensive hot dog commercially available” to a restaurant in which city?",
-    c: ["New York", "Chicago", "Seattle", "Los Angeles"],
-    a: "",
+    question:
+      "In 2014 the Guinness Book of World Records awarded the title of “most expensive hot dog choiceommercially available” to a restaurant in which city?",
+    choice: ["New York", "Chicago", "Seattle", "Los Angeles"],
+    answer: "",
   },
   {
-    q: "Who invented the pinball 'tilt' mechanism?",
-    c: ["Betty Flack", "Harry Williams", "Charles Dunn", "Brian Stener"],
-    a: "",
+    question: "Who invented the pinball 'tilt' mechanism?",
+    choice: ["Betty Flack", "Harry Williams", "Charles Dunn", "Brian Stener"],
+    answer: "",
   },
 
   {
-    q: "Which of these answers are part of Indeed's core values?",
-    c: [
+    question: "Which of these answers are part of Indeed's core values?",
+    choice: [
       "Pay per performance",
       "I help people get jobs",
       "Job seeker first",
       "Data driven",
     ],
-    a: "",
+    answer: "",
   },
   {
-    q: "79% of employees believe that it is important to have what in the workplace?",
-    c: [
+    question:
+      "79% of employees believe that it is important to have what in the workplace?",
+    choice: [
       "Fun",
       "Snacks and drinks provided",
       "Separate break area",
       "Motivation",
     ],
-    a: "",
+    answer: "",
   },
 ];
 
