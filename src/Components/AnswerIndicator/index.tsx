@@ -1,20 +1,26 @@
 import React from "react";
 import "./style.css";
 
-function CorrectIndicator() {
-  <div>
-    <p className="indicator" id="correct">
-      You got it right!
-    </p>
-  </div>;
+const CorrectIndicator = () => (
+  <div className="correctIndicator" id="correctIndicator">
+    You got it right!
+  </div>
+);
+//implicitly returning JSX element vs...
+const IncorrectIndicator = () => (
+  <div className="incorrectIndicator" id="correctIndicator">
+    That is incorrect
+  </div>
+);
+
+//having brackets that REQUIRE 'return' statement
+function AnswerReveal(props) {
+  const isCorrect = props.isCorrect === props.eachQuestion.answer;
+  if (isCorrect) {
+    return <CorrectIndicator />;
+  } else {
+    return <IncorrectIndicator />;
+  }
 }
 
-function IncorrectIndicator() {
-  <div>
-    <p className="indicator" id="incorrect">
-      That is incorrect
-    </p>
-  </div>;
-}
-
-export default { CorrectIndicator, IncorrectIndicator };
+export default { CorrectIndicator, IncorrectIndicator, AnswerReveal };

@@ -78,6 +78,7 @@ export default function App(props) {
                   //   setPlayerName("");
                   // }}
                 />
+
                 {/* takes you to first question instead of splashpage - Keeps player name */}
                 <CustomButton nextPage="/question1">Try Again</CustomButton>
                 {/* takes you to splashpage to enter new name*/}

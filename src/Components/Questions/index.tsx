@@ -5,18 +5,18 @@ const questions = [
     question:
       "The Mobile Phone Throwing World Championships take place in which country?",
     choice: ["New Zealand", "The United States", "Finland", "Japan"],
-    answer: "",
+    answer: "option3",
   },
   {
     question:
       "In 2014 the Guinness Book of World Records awarded the title of “most expensive hot dog choiceommercially available” to a restaurant in which city?",
     choice: ["New York", "Chicago", "Seattle", "Los Angeles"],
-    answer: "",
+    answer: "option3",
   },
   {
     question: "Who invented the pinball 'tilt' mechanism?",
     choice: ["Betty Flack", "Harry Williams", "Charles Dunn", "Brian Stener"],
-    answer: "",
+    answer: "option2",
   },
 
   {
@@ -27,7 +27,7 @@ const questions = [
       "Job seeker first",
       "Data driven",
     ],
-    answer: "",
+    answer: ["option1", "option3", "option4"],
   },
   {
     question:
@@ -38,7 +38,7 @@ const questions = [
       "Separate break area",
       "Motivation",
     ],
-    answer: "",
+    answer: "option1",
   },
 ];
 
