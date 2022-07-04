@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter, Route, Routes, Link } from "react-router-dom";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 import "./style.css";
 import SplashPage from "./Components/SplashPage";
 import QPageLayout from "./Components/QPageLayout";
@@ -16,6 +16,12 @@ export default function App(props) {
   function resetRadioButtons() {
     setValues("");
     setSubmitted("");
+  }
+  let score = 0;
+  for (let index = 0; index < questions.length; index++) {
+    values[index] === questions[index].answer && submitted[index] === true
+      ? score++
+      : score;
   }
 
   return (
@@ -36,11 +42,10 @@ export default function App(props) {
           {questions.map((eachQuestion, index) => (
             <Route
               path={`/question${index + 1}`}
-              // path="/QPageLayout"
               element={
                 <QPageLayout
                   counter={index + 1}
-                  scoreTracker="To-Do"
+                  scoreTracker={score}
                   question={eachQuestion.question}
                   radioButtonText1={eachQuestion.choice[0]}
                   radioButtonText2={eachQuestion.choice[1]}
@@ -78,6 +83,7 @@ export default function App(props) {
                 playerName={playerName}
                 resetName={resetName}
                 resetRadioButtons={resetRadioButtons}
+                finalScore={score}
               />
             }
           />
