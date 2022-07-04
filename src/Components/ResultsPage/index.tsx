@@ -3,6 +3,11 @@ import "../../style.css";
 import CustomButton from "../CustomButton";
 
 const ResultsPage = (props) => {
+  function resetEverything(event) {
+    props.resetName(event);
+    props.resetRadioButtons(event);
+  }
+
   return (
     <div>
       <p>
@@ -16,7 +21,7 @@ const ResultsPage = (props) => {
       <CustomButton nextPage="/question1" onClick={props.resetRadioButtons}>
         Try Again
       </CustomButton>
-      <CustomButton nextPage="/" onClick={props.resetName}>
+      <CustomButton nextPage="/" onClick={resetEverything}>
         Play as New Person
       </CustomButton>
     </div>
