@@ -13,6 +13,10 @@ export default function App(props) {
   function resetName() {
     setPlayerName("");
   }
+  function resetRadioButtons() {
+    setValues("");
+    setSubmitted("");
+  }
 
   return (
     <div>
@@ -70,7 +74,11 @@ export default function App(props) {
           <Route
             path="/resultsPage"
             element={
-              <ResultsPage playerName={playerName} resetName={resetName} />
+              <ResultsPage
+                playerName={playerName}
+                resetName={resetName}
+                resetRadioButtons={resetRadioButtons}
+              />
             }
           />
         </Routes>

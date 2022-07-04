@@ -13,7 +13,9 @@ const ResultsPage = (props) => {
         Your best score so far was [x] out of 5 questions which you got
         on[date].
       </p>
-      <CustomButton nextPage="/question1">Try Again</CustomButton>
+      <CustomButton nextPage="/question1" onClick={props.resetRadioButtons}>
+        Try Again
+      </CustomButton>
       <CustomButton nextPage="/" onClick={props.resetName}>
         Play as New Person
       </CustomButton>
