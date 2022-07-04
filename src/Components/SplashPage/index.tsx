@@ -25,10 +25,7 @@ const SplashPage = (props) => {
         />
         <br />
         <br />
-        <CustomButton
-          nextPage="/question1"
-          isDisabled={props.playerName ? false : true}
-        >
+        <CustomButton nextPage="/question1" isDisabled={!props.playerName}>
           Let's Begin!
         </CustomButton>
       </form>
