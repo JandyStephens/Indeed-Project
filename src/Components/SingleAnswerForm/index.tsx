@@ -58,8 +58,12 @@ function SingleAnswerForm(props) {
         {props.radioButtonText4}
       </label>
       <br />
-      <SubmitButton>Check my answer</SubmitButton>
-      <CustomButton nextPage={props.nextPage}>Next Question </CustomButton>
+
+      {props.isSubmitted ? (
+        <CustomButton nextPage={props.nextPage}>Next Question </CustomButton>
+      ) : (
+        <SubmitButton>Check my answer</SubmitButton>
+      )}
     </form>
   );
 }

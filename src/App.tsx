@@ -64,6 +64,7 @@ export default function App(props) {
                       return previousSubmitted;
                     });
                   }}
+                  isSubmitted={submitted[index] === true}
                   value={values[index]}
                 />
               }
