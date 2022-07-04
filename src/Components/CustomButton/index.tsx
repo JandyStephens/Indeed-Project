@@ -4,21 +4,20 @@ import { useLinkClickHandler } from "react-router-dom";
 
 const CustomButton = (props) => {
   //takes outside input and wires up to "dumb" button element
-  const handleClick = useLinkClickHandler(props.nextPage);
-  // const setPlayerName = (e) => {
-  //   setPlayerName("");
-  // };
-  // const resetPlayerName = setPlayerName(() => "");
-  // const handleSubmit = (e) => {
-  //   addChart(name);
-  //   e.preventDefault();
+  const goToNextPage = useLinkClickHandler(props.nextPage);
+
+  function handleClick(event) {
+    //runs whatever function is passed through onClick
+    props.onClick?.(event);
+    //runs goToNextPage function - requires event
+    goToNextPage(event);
+  }
 
   return (
     <button
-      className="customButton"
+      className="styleButton"
       onClick={handleClick}
       disabled={props.isDisabled}
-      // onSubmit={resetPlayerName}
     >
       {props.children}
     </button>

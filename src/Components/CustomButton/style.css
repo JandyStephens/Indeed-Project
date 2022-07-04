@@ -1,4 +1,4 @@
-.customButton {
+.styleButton {
   background-color: #065fb1;
   height: 43px;
   border-radius: 8px;
@@ -18,6 +18,6 @@
   flex-grow: 0;
   flex: none;
 }
-.customButton:disabled {
+.styleButton:disabled {
   background-color: grey;
 }

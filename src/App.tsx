@@ -5,12 +5,14 @@ import SplashPage from "./Components/SplashPage";
 import QPageLayout from "./Components/QPageLayout";
 import ResultsPage from "./Components/ResultsPage";
 import questions from "./Components/Questions";
-import CustomButton from "./Components/CustomButton";
 
 export default function App(props) {
   const [playerName, setPlayerName] = React.useState("");
   const [values, setValues] = React.useState({});
   const [submitted, setSubmitted] = React.useState({});
+  function resetName() {
+    setPlayerName("");
+  }
 
   return (
     <div>
@@ -68,23 +70,7 @@ export default function App(props) {
           <Route
             path="/resultsPage"
             element={
-              <div>
-                <ResultsPage
-                  playerName={playerName}
-                  // onClick={() => setPlayerName(() => "")}
-                  // onSubmit="resetPlayerName"
-                  // onClick={playerName={""}}
-                  // onChange={(e) => {
-                  //   const resetPlayerName = { playerName: e.target.value };
-                  //   setPlayerName("");
-                  // }}
-                />
-
-                {/* takes you to first question instead of splashpage - Keeps player name */}
-                <CustomButton nextPage="/question1">Try Again</CustomButton>
-                {/* takes you to splashpage to enter new name*/}
-                <CustomButton nextPage="/">Play as New Person</CustomButton>
-              </div>
+              <ResultsPage playerName={playerName} resetName={resetName} />
             }
           />
         </Routes>

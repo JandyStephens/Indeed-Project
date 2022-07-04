@@ -1,5 +1,6 @@
 import React from "react";
 import "../../style.css";
+import CustomButton from "../CustomButton";
 
 const ResultsPage = (props) => {
   return (
@@ -12,6 +13,10 @@ const ResultsPage = (props) => {
         Your best score so far was [x] out of 5 questions which you got
         on[date].
       </p>
+      <CustomButton nextPage="/question1">Try Again</CustomButton>
+      <CustomButton nextPage="/" onClick={props.resetName}>
+        Play as New Person
+      </CustomButton>
     </div>
   );
 };
