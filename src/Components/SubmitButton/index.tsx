@@ -3,7 +3,7 @@ import "../CustomButton/style.css";
 
 const SubmitButton = (props) => {
   return (
-    <button type="submit" className="styleButton">
+    <button type="submit" className="styleButton" disabled={props.disabled}>
       {props.children}
     </button>
   );

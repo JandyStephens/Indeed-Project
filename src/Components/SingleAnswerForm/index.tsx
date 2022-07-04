@@ -69,7 +69,7 @@ function SingleAnswerForm(props) {
       {props.isSubmitted ? (
         <CustomButton nextPage={props.nextPage}>Next Question </CustomButton>
       ) : (
-        <SubmitButton>Check my answer</SubmitButton>
+        <SubmitButton disabled={!props.value}>Check my answer</SubmitButton>
       )}
     </form>
   );

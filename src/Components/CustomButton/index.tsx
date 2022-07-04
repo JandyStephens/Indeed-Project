@@ -14,11 +14,7 @@ const CustomButton = (props) => {
   }
 
   return (
-    <button
-      className="styleButton"
-      onClick={handleClick}
-      disabled={props.isDisabled}
-    >
+    <button className="styleButton" onClick={handleClick}>
       {props.children}
     </button>
   );
