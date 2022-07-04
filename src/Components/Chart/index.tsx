@@ -6,11 +6,11 @@ function ScoreChart(props) {
       <thead>
         <tr>
           <th>Name</th>
-          {/* <th>Score</th>
-          <th>Date</th> */}
+          <th>Score</th>
+          <th>Date</th>
         </tr>
       </thead>
-      {props.name.map((v) => {
+      {props.PlayerName.map((v) => {
         return (
           <tr>
             <th>{v}</th>

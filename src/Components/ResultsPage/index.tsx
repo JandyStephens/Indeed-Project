@@ -10,13 +10,15 @@ const ResultsPage = (props) => {
 
   return (
     <div>
+      {/* add image */}
+      {/* add Banner */}
       <p>
         {props.playerName}, you got {props.finalScore} out of 5 questions right!
       </p>
       <br />
       <p>
-        Your best score so far was [x] out of 5 questions which you got
-        on[date].
+        Your best score so far was [x] out of 5 questions which you got on
+        [date].
       </p>
       <CustomButton nextPage="/question1" onClick={props.resetRadioButtons}>
         Try Again
