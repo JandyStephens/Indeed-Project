@@ -19,6 +19,7 @@ const QPageLayout = (props) => {
         value={props.value}
         onSubmit={props.onSubmit}
         isSubmitted={props.isSubmitted}
+        isCorrect={props.isCorrect}
       ></SingleAnswerForm>
     </div>
   );

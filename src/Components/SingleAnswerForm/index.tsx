@@ -1,8 +1,8 @@
 import React from "react";
-import { useLinkClickHandler } from "react-router-dom";
 import CustomButton from "../CustomButton";
 import SubmitButton from "../SubmitButton";
 import "./style.css";
+import AnswerReveal from "../AnswerIndicator";
 
 function SingleAnswerForm(props) {
   const handleSubmit = (e) => {
@@ -58,7 +58,8 @@ function SingleAnswerForm(props) {
         {props.radioButtonText4}
       </label>
       <br />
-
+      {props.isSubmitted ? <AnswerReveal isCorrect={props.isCorrect} /> : null}
+      <br />
       {props.isSubmitted ? (
         <CustomButton nextPage={props.nextPage}>Next Question </CustomButton>
       ) : (

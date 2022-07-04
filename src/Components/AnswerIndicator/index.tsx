@@ -13,14 +13,13 @@ const IncorrectIndicator = () => (
   </div>
 );
 
-//having brackets that REQUIRE 'return' statement
+//having brackets means REQUIRE 'return' statement
 function AnswerReveal(props) {
-  const isCorrect = props.isCorrect === props.eachQuestion.answer;
-  if (isCorrect) {
+  if (props.isCorrect) {
     return <CorrectIndicator />;
   } else {
     return <IncorrectIndicator />;
   }
 }
 
-export default { CorrectIndicator, IncorrectIndicator, AnswerReveal };
+export default AnswerReveal;

@@ -66,6 +66,7 @@ export default function App(props) {
                   }}
                   isSubmitted={submitted[index] === true}
                   value={values[index]}
+                  isCorrect={values[index] === eachQuestion.answer}
                 />
               }
             />
