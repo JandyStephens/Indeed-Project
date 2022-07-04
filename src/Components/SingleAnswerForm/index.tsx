@@ -24,6 +24,7 @@ function SingleAnswerForm(props) {
           value="option1"
           onChange={props.onChange}
           checked={props.value === "option1"}
+          disabled={props.isSubmitted ? true : false}
         />
         {props.radioButtonText1}
       </label>
@@ -34,6 +35,7 @@ function SingleAnswerForm(props) {
           value="option2"
           onChange={props.onChange}
           checked={props.value === "option2"}
+          disabled={props.isSubmitted ? true : false}
         />
         {props.radioButtonText2}
       </label>
@@ -44,6 +46,7 @@ function SingleAnswerForm(props) {
           value="option3"
           onChange={props.onChange}
           checked={props.value === "option3"}
+          disabled={props.isSubmitted ? true : false}
         />
         {props.radioButtonText3}
       </label>
@@ -54,6 +57,7 @@ function SingleAnswerForm(props) {
           value="option4"
           onChange={props.onChange}
           checked={props.value === "option4"}
+          disabled={props.isSubmitted ? true : false}
         />
         {props.radioButtonText4}
       </label>

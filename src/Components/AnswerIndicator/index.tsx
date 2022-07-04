@@ -2,14 +2,14 @@ import React from "react";
 import "./style.css";
 
 const CorrectIndicator = () => (
-  <div className="correctIndicator" id="correctIndicator">
+  <div className="answerIndicator" id="correctIndicator">
     You got it right!
   </div>
 );
 //implicitly returning JSX element vs...
 const IncorrectIndicator = () => (
-  <div className="incorrectIndicator" id="correctIndicator">
-    That is incorrect
+  <div className="answerIndicator" id="incorrectIndicator">
+    You got it wrong
   </div>
 );
 
