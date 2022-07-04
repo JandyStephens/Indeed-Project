@@ -17,6 +17,7 @@ const CustomButton = (props) => {
     <button
       className="customButton"
       onClick={handleClick}
+      disabled={props.isDisabled}
       // onSubmit={resetPlayerName}
     >
       {props.children}

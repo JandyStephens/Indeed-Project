@@ -23,6 +23,14 @@ const SplashPage = (props) => {
           value={props.playerName}
           onChange={(e) => props.setPlayerName(e.target.value)}
         />
+        <br />
+        <br />
+        <CustomButton
+          nextPage="/question1"
+          isDisabled={props.playerName ? false : true}
+        >
+          Let's Begin!
+        </CustomButton>
       </form>
       <br />
     </div>

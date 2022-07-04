@@ -18,6 +18,7 @@ function SingleAnswerForm(props) {
     >
       <label>{props.question}</label>
       <br />
+      <br />
       <label>
         <input
           type="radio"
@@ -61,6 +62,7 @@ function SingleAnswerForm(props) {
         />
         {props.radioButtonText4}
       </label>
+      <br />
       <br />
       {props.isSubmitted ? <AnswerReveal isCorrect={props.isCorrect} /> : null}
       <br />

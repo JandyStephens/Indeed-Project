@@ -24,13 +24,6 @@ export default function App(props) {
                   playerName={playerName}
                   setPlayerName={setPlayerName}
                 />
-                <CustomButton
-                  // type="submit"
-                  // value="Log Name"
-                  nextPage="/question1"
-                >
-                  Let's Begin!
-                </CustomButton>
               </div>
             }
           />
