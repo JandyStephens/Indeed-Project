@@ -10,6 +10,7 @@ import CustomButton from "./Components/CustomButton";
 export default function App(props) {
   const [playerName, setPlayerName] = React.useState("");
   const [values, setValues] = React.useState({});
+  const [submitted, setSubmitted] = React.useState({});
 
   return (
     <div>
@@ -54,8 +55,13 @@ export default function App(props) {
                   onChange={(e) => {
                     setValues(({ ...previousValue }) => {
                       previousValue[index] = e.target.value;
-
                       return previousValue;
+                    });
+                  }}
+                  onSubmit={(e) => {
+                    setSubmitted(({ ...previousSubmitted }) => {
+                      previousSubmitted[index] = true;
+                      return previousSubmitted;
                     });
                   }}
                   value={values[index]}

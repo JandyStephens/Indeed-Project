@@ -1,11 +1,13 @@
 import React from "react";
 import { useLinkClickHandler } from "react-router-dom";
 import CustomButton from "../CustomButton";
+import SubmitButton from "../SubmitButton";
 import "./style.css";
 
 function SingleAnswerForm(props) {
   const handleSubmit = (e) => {
     e.preventDefault();
+    props.onSubmit();
   };
 
   return (
@@ -56,6 +58,7 @@ function SingleAnswerForm(props) {
         {props.radioButtonText4}
       </label>
       <br />
+      <SubmitButton>Check my answer</SubmitButton>
       <CustomButton nextPage={props.nextPage}>Next Question </CustomButton>
     </form>
   );

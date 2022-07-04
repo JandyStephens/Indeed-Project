@@ -17,6 +17,7 @@ const QPageLayout = (props) => {
         nextPage={props.nextPage}
         onChange={props.onChange}
         value={props.value}
+        onSubmit={props.onSubmit}
       ></SingleAnswerForm>
     </div>
   );
