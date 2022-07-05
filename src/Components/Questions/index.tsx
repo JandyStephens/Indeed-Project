@@ -27,7 +27,8 @@ const questions = [
       "Job seeker first",
       "Data driven",
     ],
-    answer: ["option1", "option3", "option4"],
+    //include all checkboxes to verify answer key is source of truth for correct AND INCORRECT answers
+    answer: { option1: true, option2: false, option3: true, option4: true },
   },
   {
     question:
