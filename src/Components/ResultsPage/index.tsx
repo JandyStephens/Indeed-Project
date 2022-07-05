@@ -1,6 +1,28 @@
 import React from "react";
 import "../../style.css";
 import CustomButton from "../CustomButton";
+import amazing_pic from "../../assets/images/amazing.jpeg";
+import almost_there_pic from "../../assets/images/almost_there.jpeg";
+import cloud_encouragement_pic from "../../assets/images/cloud_encouragement.jpeg";
+
+function whichPic(score) {
+  if (score === 5) {
+    return amazing_pic;
+  } else if (score === 3 || score === 4) {
+    return almost_there_pic;
+  } else {
+    return cloud_encouragement_pic;
+  }
+}
+function whichAltText(score) {
+  if (score === 5) {
+    return "the word 'amazing' in comic book font";
+  } else if (score === 3 || score === 4) {
+    return "one panel comic that says 'don't stop now, you're almost there!'";
+  } else {
+    return "4 panel comic of a happy cloud saying that it's okay to take a break and that you're doing so well";
+  }
+}
 
 const ResultsPage = (props) => {
   function resetEverything(event) {
@@ -10,16 +32,20 @@ const ResultsPage = (props) => {
 
   return (
     <div>
-      {/* add image */}
-      {/* add Banner */}
-      <p>
+      <img
+        src={whichPic(props.finalScore)}
+        alt={whichAltText(props.finalScore)}
+      />
+
+      <h1>You're a Trivia Master!</h1>
+      <h4>
         {props.playerName}, you got {props.finalScore} out of 5 questions right!
-      </p>
+      </h4>
       <br />
-      <p>
+      <h4>
         Your best score so far was [x] out of 5 questions which you got on
         [date].
-      </p>
+      </h4>
       <CustomButton nextPage="/question1" onClick={props.resetRadioButtons}>
         Try Again
       </CustomButton>
