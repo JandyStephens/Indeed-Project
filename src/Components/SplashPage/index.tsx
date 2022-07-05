@@ -1,11 +1,15 @@
 import React from "react";
 import "../../style.css";
 import CustomButton from "../CustomButton";
+import TriviaBanner from "../../assets/images/trivia_banner.jpeg";
 
 const SplashPage = (props) => {
   return (
     <div className="splashPage">
-      <h1 className="splashHeader">Trivia</h1>
+      <img
+        src={TriviaBanner}
+        alt="The word 'trivia' spelled out in game tiles"
+      />
       <p className="instructions">
         Select the correct answer(s) to the following 5 questions. Your final
         score will be displayed at the end. Enjoy!
