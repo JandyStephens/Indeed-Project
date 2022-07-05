@@ -9,7 +9,7 @@ const questions = [
   },
   {
     question:
-      "In 2014 the Guinness Book of World Records awarded the title of “most expensive hot dog choiceommercially available” to a restaurant in which city?",
+      "In 2014 the Guinness Book of World Records awarded the title of “most expensive hot dog commercially available” to a restaurant in which city?",
     choice: ["New York", "Chicago", "Seattle", "Los Angeles"],
     answer: "option3",
   },

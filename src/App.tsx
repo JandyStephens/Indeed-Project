@@ -46,11 +46,13 @@ export default function App(props) {
                 <QPageLayout
                   counter={index + 1}
                   scoreTracker={score}
-                  question={eachQuestion.question}
-                  radioButtonText1={eachQuestion.choice[0]}
-                  radioButtonText2={eachQuestion.choice[1]}
-                  radioButtonText3={eachQuestion.choice[2]}
-                  radioButtonText4={eachQuestion.choice[3]}
+                  // question={eachQuestion.question}
+                  // answer={eachQuestion.answer}
+                  // radioButtonText1={eachQuestion.choice[0]}
+                  // radioButtonText2={eachQuestion.choice[1]}
+                  // radioButtonText3={eachQuestion.choice[2]}
+                  // radioButtonText4={eachQuestion.choice[3]}
+                  question={eachQuestion}
                   nextPage={
                     index === questions.length - 1
                       ? "/resultsPage"

@@ -25,7 +25,7 @@ function whichAltText(score) {
 }
 function whichResultHeader(score) {
   if (score === 5) {
-    return "You're a Trivia Master!";
+    return "you're a Trivia Master!";
   } else if (score === 3 || score === 4) {
     return "So close!";
   } else {
