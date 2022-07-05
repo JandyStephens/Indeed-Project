@@ -8,11 +8,34 @@ import questions from "./Components/Questions";
 
 export default function App(props) {
   const [playerName, setPlayerName] = React.useState("");
+
   const [values, setValues] = React.useState({});
+
+  /*
+  {
+    0: 'option1',
+    1: 'option3',
+    2: 'option1',
+    3: {'option2': true, 'option3': false}
+  }
+  */
+
+  const [checkboxState, setCheckboxState] = React.useState(
+    new Array(4).fill(false)
+  );
+  function updateCheckbox(index) {
+    setCheckboxState(([...oldCheckboxState]) => {
+      oldCheckboxState[index] = true;
+
+      return oldCheckboxState;
+    });
+  }
+
   const [submitted, setSubmitted] = React.useState({});
   function resetName() {
     setPlayerName("");
   }
+
   function resetRadioButtons() {
     setValues("");
     setSubmitted("");
@@ -53,16 +76,29 @@ export default function App(props) {
                   // radioButtonText3={eachQuestion.choice[2]}
                   // radioButtonText4={eachQuestion.choice[3]}
                   question={eachQuestion}
+                  checked={checkboxState[index]}
                   nextPage={
                     index === questions.length - 1
                       ? "/resultsPage"
                       : `/question${index + 2}`
                   }
                   onChange={(e) => {
-                    setValues(({ ...previousValue }) => {
-                      previousValue[index] = e.target.value;
-                      return previousValue;
-                    });
+                    if (typeof eachQuestion.answer === "string") {
+                      setValues(({ ...previousValue }) => {
+                        previousValue[index] = e.target.value;
+                        return previousValue;
+                      });
+                    } else {
+                      setValues(({ ...previousValue }) => {
+                        //ensures selection is an object
+                        previousValue[index] = { ...previousValue[index] };
+                        //question 4 object - setting checkbox to true
+                        previousValue[index][e.target.value] =
+                          //inverts previous selection - CAN be itself
+                          !previousValue[index][e.target.value];
+                        return previousValue;
+                      });
+                    }
                   }}
                   onSubmit={(e) => {
                     setSubmitted(({ ...previousSubmitted }) => {

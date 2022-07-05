@@ -22,10 +22,10 @@ function MultiAnswerForm(props) {
       <label>
         <input
           type="checkbox"
-          name="answer1"
+          name="indeedValues"
           value="option1"
           onChange={props.onChange}
-          checked={props.value === "option1"}
+          checked={props.value?.option1 === true}
           disabled={props.isSubmitted ? true : false}
         />
         {props.checkboxText1}
@@ -34,10 +34,10 @@ function MultiAnswerForm(props) {
       <label>
         <input
           type="checkbox"
-          name="answer2"
+          name="indeedValues"
           value="option2"
           onChange={props.onChange}
-          checked={props.value === "option1"}
+          checked={props.value?.option2 === true}
           disabled={props.isSubmitted ? true : false}
         />
         {props.checkboxText2}
@@ -46,10 +46,10 @@ function MultiAnswerForm(props) {
       <label>
         <input
           type="checkbox"
-          name="answer3"
+          name="indeedValues"
           value="option3"
           onChange={props.onChange}
-          checked={props.value === "option1"}
+          checked={props.value?.option3 === true}
           disabled={props.isSubmitted ? true : false}
         />
         {props.checkboxText3}
@@ -58,10 +58,10 @@ function MultiAnswerForm(props) {
       <label>
         <input
           type="checkbox"
-          name="answer4"
+          name="indeedValues"
           value="option4"
           onChange={props.onChange}
-          checked={props.value === "option1"}
+          checked={props.value?.option4 === true}
           disabled={props.isSubmitted ? true : false}
         />
         {props.checkboxText4}
