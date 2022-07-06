@@ -4,6 +4,7 @@ import CustomButton from "../CustomButton";
 import amazing_pic from "../../assets/images/amazing.jpeg";
 import almost_there_pic from "../../assets/images/almost_there.jpeg";
 import cloud_encouragement_pic from "../../assets/images/cloud_encouragement.jpeg";
+import { useEffect } from "react";
 
 function whichPic(score) {
   if (score === 5) {
@@ -38,6 +39,10 @@ const ResultsPage = (props) => {
     props.resetName(event);
     props.resetRadioButtons(event);
   }
+  //on page load, it runs function and updates (if needed)
+  useEffect(() => {
+    props.compareScore();
+  });
 
   return (
     <div>
@@ -52,8 +57,8 @@ const ResultsPage = (props) => {
       </h4>
       <br />
       <h4>
-        Your best score so far was [x] out of 5 questions which you got on
-        [date].
+        Your best score so far was {props.bestScore} out of 5 questions which
+        you got on [date].
       </h4>
       <CustomButton nextPage="/question1" onClick={props.resetRadioButtons}>
         Try Again

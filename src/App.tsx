@@ -24,44 +24,36 @@ export default function App(props) {
 
   const [values, setValues] = React.useState({});
 
-  /*
-  {
-    0: 'option1',
-    1: 'option3',
-    2: 'option1',
-    3: {'option2': true, 'option3': false}
-  }
-  */
-
-  // const [checkboxState, setCheckboxState] = React.useState(
-  //   new Array(4).fill(false)
-  // );
-  // function updateCheckbox(index) {
-  //   setCheckboxState(([...oldCheckboxState]) => {
-  //     oldCheckboxState[index] = true;
-
-  //     return oldCheckboxState;
-  //   });
-  // }
-
   const [submitted, setSubmitted] = React.useState({});
   function resetName() {
     setPlayerName("");
   }
 
+  const [bestScores, setBestScores] = React.useState({});
+  //if undefined, set to 0
+  const bestScore = bestScores[playerName] || 0;
+
   function resetRadioButtons() {
     setValues("");
     setSubmitted("");
   }
-  let score = 0;
+  let currentScore = 0;
   for (let index = 0; index < questions.length; index++) {
     values[index] === questions[index].answer ||
     (shallowEqual(questions[index].answer, values[index]) &&
       submitted[index] === true)
-      ? score++
-      : score;
+      ? currentScore++
+      : currentScore;
   }
-
+  function compareScore() {
+    //score-number    bestScore-object
+    if (currentScore > bestScore) {
+      setBestScores(({ ...previousBestScores }) => {
+        previousBestScores[playerName] = currentScore;
+        return previousBestScores;
+      });
+    }
+  }
   return (
     <div>
       <BrowserRouter>
@@ -85,7 +77,7 @@ export default function App(props) {
                 element={
                   <QPageLayout
                     counter={index + 1}
-                    scoreTracker={score}
+                    scoreTracker={currentScore}
                     // question={eachQuestion.question}
                     // answer={eachQuestion.answer}
                     // radioButtonText1={eachQuestion.choice[0]}
@@ -145,7 +137,9 @@ export default function App(props) {
                 playerName={playerName}
                 resetName={resetName}
                 resetRadioButtons={resetRadioButtons}
-                finalScore={score}
+                finalScore={currentScore}
+                bestScore={bestScore}
+                compareScore={compareScore}
               />
             }
           />
