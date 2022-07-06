@@ -24,13 +24,13 @@ function whichAltText(score) {
     return "4 panel comic of a happy cloud saying that it's okay to take a break and that you're doing so well";
   }
 }
-function whichResultHeader(score) {
+function whichResultHeader(score, playerName) {
   if (score === 5) {
-    return "you're a Trivia Master!";
+    return `${playerName}, you're a Trivia Master!`;
   } else if (score === 3 || score === 4) {
-    return "So close!";
+    return `So close, ${playerName}!`;
   } else {
-    return "Don't worry, you can try again.";
+    return `Don't worry ${playerName}, you can try again.`;
   }
 }
 
@@ -51,10 +51,8 @@ const ResultsPage = (props) => {
         alt={whichAltText(props.finalScore)}
       />
 
-      <h1>{whichResultHeader(props.finalScore)}</h1>
-      <h4>
-        {props.playerName}, you got {props.finalScore} out of 5 questions right!
-      </h4>
+      <h1>{whichResultHeader(props.finalScore, props.playerName)}</h1>
+      <h4>You got {props.finalScore} out of 5 questions right!</h4>
       <br />
       <h4>
         Your best score so far was {props.bestScore} out of 5 questions which
