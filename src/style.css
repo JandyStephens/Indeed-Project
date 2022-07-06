@@ -118,7 +118,7 @@ img {
   background-color: yellow;
   position: fixed;
   bottom: 20px;
-  right: 20px;
+  left: 20px;
   animation-name: blink;
   animation-duration: 0.15s;
   animation-iteration-count: infinite;
