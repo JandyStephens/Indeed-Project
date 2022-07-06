@@ -3,17 +3,20 @@ import "../../style.css";
 import "./style.css";
 import CustomButton from "../CustomButton";
 import amazing_pic from "../../assets/images/amazing.jpeg";
-import almost_there_pic from "../../assets/images/almost_there.jpeg";
+import amazing_neon from "../../assets/images/amazing_neon.jpeg";
+import almost_there from "../../assets/images/almost_there.jpeg";
+import almost_there_neon from "../../assets/images/almost_there_neon.jpeg";
 import cloud_encouragement_pic from "../../assets/images/cloud_encouragement.jpeg";
+import whomp_neon from "../../assets/images/whomp_neon.jpeg";
 import { useEffect } from "react";
 
-function whichPic(score) {
+function whichPic(score, isWooow) {
   if (score === 5) {
-    return amazing_pic;
+    return isWooow ? amazing_neon : amazing_pic;
   } else if (score === 3 || score === 4) {
-    return almost_there_pic;
+    return isWooow ? almost_there_neon : almost_there;
   } else {
-    return cloud_encouragement_pic;
+    return isWooow ? whomp_neon : cloud_encouragement_pic;
   }
 }
 function whichAltText(score) {
@@ -48,7 +51,7 @@ const ResultsPage = (props) => {
   return (
     <div className="container">
       <img
-        src={whichPic(props.finalScore)}
+        src={whichPic(props.finalScore, props.isWooow)}
         alt={whichAltText(props.finalScore)}
       />
 

@@ -1,13 +1,48 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+
 #root {
   font-family: "Roboto";
   font-style: normal;
+  width: 100%;
+  height: 100%;
   display: flex;
-  justify-content: center;
-  margin: 5rem 0rem;
+  flex-direction: column;
 }
 
-body {
+.reactApp {
   background-color: #deefff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+  padding: 5rem 0rem;
+}
+
+.wooow.reactApp {
+  background-color: #161616;
+}
+
+.wooow .container {
+  background-color: #000000;
+  border-color: rgb(175, 1, 233);
+  box-shadow: 0px 4px 4px rgba(175, 1, 233, 0.75);
+  color: #ffffff;
+}
+
+.wooow .styleButton {
+  background-color: rgb(54, 25, 183);
+  box-shadow: 0px 4px 4px rgba(54, 25, 183, 0.75);
+}
+
+.wooow .styleButton:disabled {
+  background-color: rgb(63, 54, 54);
+  box-shadow: 0px 4px 4px rgba(63, 54, 54, 0.75);
 }
 
 img {
@@ -24,6 +59,7 @@ img {
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   padding: 1rem;
   background-color: #ffffff;
+  color: #2d2d2d;
 }
 
 .topBar {
@@ -40,7 +76,6 @@ img {
   size: 16px;
   line-height: 24px;
   text-align: center;
-  color: #2d2d2d;
 }
 
 .scoreTracker,
@@ -50,7 +85,6 @@ img {
   font-size: 20px;
   line-height: 150%;
   text-align: center;
-  color: #2d2d2d;
 }
 
 .splashHeader,
@@ -59,7 +93,6 @@ img {
   font-size: 36px;
   line-height: 125%;
   text-align: center;
-  color: #2d2d2d;
 }
 
 .styleButton {

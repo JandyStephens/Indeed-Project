@@ -2,12 +2,13 @@ import React from "react";
 import "../../style.css";
 import CustomButton from "../CustomButton";
 import TriviaBanner from "../../assets/images/trivia_banner.jpeg";
+import NeonTriviaBanner from "../../assets/images/trivia_neon.jpeg";
 
 const SplashPage = (props) => {
   return (
     <div className="container">
       <img
-        src={TriviaBanner}
+        src={props.isWooow ? NeonTriviaBanner : TriviaBanner}
         alt="The word 'trivia' spelled out in game tiles"
       />
       <p className="instructions">

@@ -13,3 +13,11 @@
 #incorrectIndicator {
   color: #9e3b0a;
 }
+
+.wooow #correctIndicator {
+  color: #51ca00;
+}
+
+.wooow #incorrectIndicator {
+  color: #ec0000;
+}
