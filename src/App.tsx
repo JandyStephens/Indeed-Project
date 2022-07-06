@@ -110,10 +110,10 @@ export default function App(props) {
                     isSubmitted={submitted[index] === true}
                     value={values[index]}
                     isCorrect={
-                      //radio buttons
+                      //for radio buttons
                       values[index] === eachQuestion.answer ||
-                      //checkbox
-                      //swapped parameters so func will check for ALL required answers vs just selection
+                      //for checkbox
+                      //swapped parameters so function will check for ALL required answers vs just selection
                       shallowEqual(eachQuestion.answer, values[index])
                     }
                   />
