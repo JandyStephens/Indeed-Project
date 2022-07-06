@@ -138,6 +138,16 @@ export default function App(props) {
           />
         </Routes>
       </BrowserRouter>
+      <button
+        className="wooowButton"
+        onClick={() => {
+          if (wooow === true) {
+            setWooow(false);
+          } else {
+            setWooow(true);
+          }
+        }}
+      ></button>
     </div>
   );
 }

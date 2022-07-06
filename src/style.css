@@ -45,6 +45,28 @@ body {
   box-shadow: 0px 4px 4px rgba(63, 54, 54, 0.75);
 }
 
+.wooowButton {
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 1rem;
+  background-color: yellow;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  animation-name: blink;
+  animation-duration: 0.15s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes blink {
+  from {
+    background-color: rgb(241, 2, 225);
+  }
+  to {
+    background-color: yellow;
+  }
+}
+
 img {
   width: 100%;
 }
