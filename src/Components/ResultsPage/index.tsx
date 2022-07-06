@@ -1,5 +1,6 @@
 import React from "react";
 import "../../style.css";
+import "./style.css";
 import CustomButton from "../CustomButton";
 import amazing_pic from "../../assets/images/amazing.jpeg";
 import almost_there_pic from "../../assets/images/almost_there.jpeg";
@@ -30,7 +31,7 @@ function whichResultHeader(score, playerName) {
   } else if (score === 3 || score === 4) {
     return `So close, ${playerName}!`;
   } else {
-    return `Don't worry ${playerName}, you can try again.`;
+    return `Don't worry ${playerName}, you can try again`;
   }
 }
 
@@ -45,25 +46,30 @@ const ResultsPage = (props) => {
   });
 
   return (
-    <div>
+    <div className="container">
       <img
         src={whichPic(props.finalScore)}
         alt={whichAltText(props.finalScore)}
       />
 
-      <h1>{whichResultHeader(props.finalScore, props.playerName)}</h1>
-      <h4>You got {props.finalScore} out of 5 questions right!</h4>
+      <h1 className="resultHeader">
+        {whichResultHeader(props.finalScore, props.playerName)}
+      </h1>
+      <div className="resultsText">
+        You got {props.finalScore} out of 5 questions right!
+        <br /> Your best score so far was {props.bestScore} out of 5 questions
+        which you got on {new Date().toLocaleDateString()}
+      </div>
       <br />
-      <h4>
-        Your best score so far was {props.bestScore} out of 5 questions which
-        you got on {new Date().toLocaleDateString()}.
-      </h4>
-      <CustomButton nextPage="/question1" onClick={props.resetRadioButtons}>
-        Try Again
-      </CustomButton>
-      <CustomButton nextPage="/" onClick={resetEverything}>
-        Play as New Person
-      </CustomButton>
+      <div className="resultButtonContainer">
+        <CustomButton nextPage="/question1" onClick={props.resetRadioButtons}>
+          Try Again
+        </CustomButton>
+        <br />
+        <CustomButton nextPage="/" onClick={resetEverything}>
+          Play as New Person
+        </CustomButton>
+      </div>
     </div>
   );
 };

@@ -6,7 +6,7 @@ import SingleAnswerForm from "../SingleAnswerForm";
 
 const QPageLayout = (props) => {
   return (
-    <div>
+    <div className="container">
       <QuestionCounter>{props.counter}</QuestionCounter>
       <ScoreTracker>{props.scoreTracker}</ScoreTracker>
 

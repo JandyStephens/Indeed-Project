@@ -1,5 +1,5 @@
 import React from "react";
-import "./style.css";
+import "../../style.css";
 import { useLinkClickHandler } from "react-router-dom";
 
 const CustomButton = (props) => {

@@ -5,14 +5,17 @@ import TriviaBanner from "../../assets/images/trivia_banner.jpeg";
 
 const SplashPage = (props) => {
   return (
-    <div className="splashPage">
+    <div className="container">
       <img
         src={TriviaBanner}
         alt="The word 'trivia' spelled out in game tiles"
       />
       <p className="instructions">
-        Select the correct answer(s) to the following 5 questions. Your final
-        score will be displayed at the end. Enjoy!
+        Select the correct answer(s) to the following 5 questions. <br />
+        Your final score will be displayed at the end.
+        <br />
+        <br />
+        Enjoy!
       </p>
       <br />
       <form

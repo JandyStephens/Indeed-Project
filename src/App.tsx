@@ -54,96 +54,82 @@ export default function App(props) {
     }
   }
   return (
-    <div>
-      <BrowserRouter>
-        <Routes>
-          <Route
-            path="/"
-            element={
-              <div>
-                <SplashPage
-                  playerName={playerName}
-                  setPlayerName={setPlayerName}
-                />
-              </div>
-            }
-          />
-          {questions.map((eachQuestion, index) => {
-            console.log(values[index], eachQuestion.answer);
-            return (
-              <Route
-                path={`/question${index + 1}`}
-                element={
-                  <QPageLayout
-                    counter={index + 1}
-                    scoreTracker={currentScore}
-                    // question={eachQuestion.question}
-                    // answer={eachQuestion.answer}
-                    // radioButtonText1={eachQuestion.choice[0]}
-                    // radioButtonText2={eachQuestion.choice[1]}
-                    // radioButtonText3={eachQuestion.choice[2]}
-                    // radioButtonText4={eachQuestion.choice[3]}
-                    question={eachQuestion}
-                    // checked={checkboxState[index]}
-                    nextPage={
-                      index === questions.length - 1
-                        ? "/resultsPage"
-                        : `/question${index + 2}`
-                    }
-                    onChange={(e) => {
-                      if (typeof eachQuestion.answer === "string") {
-                        setValues(({ ...previousValue }) => {
-                          previousValue[index] = e.target.value;
-                          return previousValue;
-                        });
-                      } else {
-                        setValues(({ ...previousValue }) => {
-                          //ensures selection is an object
-                          previousValue[index] = { ...previousValue[index] };
-                          //question 4 object - setting checkbox to true
-                          previousValue[index][e.target.value] =
-                            //inverts previous selection - CAN be itself
-                            !previousValue[index][e.target.value];
-                          return previousValue;
-                        });
-                      }
-                    }}
-                    onSubmit={(e) => {
-                      setSubmitted(({ ...previousSubmitted }) => {
-                        previousSubmitted[index] = true;
-                        return previousSubmitted;
+    <BrowserRouter>
+      <Routes>
+        <Route
+          path="/"
+          element={
+            <SplashPage playerName={playerName} setPlayerName={setPlayerName} />
+          }
+        />
+        {questions.map((eachQuestion, index) => {
+          console.log(values[index], eachQuestion.answer);
+          return (
+            <Route
+              path={`/question${index + 1}`}
+              element={
+                <QPageLayout
+                  counter={index + 1}
+                  scoreTracker={currentScore}
+                  question={eachQuestion}
+                  nextPage={
+                    index === questions.length - 1
+                      ? "/resultsPage"
+                      : `/question${index + 2}`
+                  }
+                  onChange={(e) => {
+                    if (typeof eachQuestion.answer === "string") {
+                      setValues(({ ...previousValue }) => {
+                        previousValue[index] = e.target.value;
+                        return previousValue;
                       });
-                    }}
-                    isSubmitted={submitted[index] === true}
-                    value={values[index]}
-                    isCorrect={
-                      //radio buttons
-                      values[index] === eachQuestion.answer ||
-                      //checkbox
-                      //swapped parameters so func will check for ALL required answers vs just selection
-                      shallowEqual(eachQuestion.answer, values[index])
+                    } else {
+                      setValues(({ ...previousValue }) => {
+                        //ensures selection is an object
+                        previousValue[index] = { ...previousValue[index] };
+                        //question 4 object - setting checkbox to true
+                        previousValue[index][e.target.value] =
+                          //inverts previous selection
+                          !previousValue[index][e.target.value];
+                        return previousValue;
+                      });
                     }
-                  />
-                }
-              />
-            );
-          })}
+                  }}
+                  onSubmit={(e) => {
+                    setSubmitted(({ ...previousSubmitted }) => {
+                      previousSubmitted[index] = true;
+                      return previousSubmitted;
+                    });
+                  }}
+                  isSubmitted={submitted[index] === true}
+                  value={values[index]}
+                  isCorrect={
+                    //radio buttons
+                    values[index] === eachQuestion.answer ||
+                    //checkbox
+                    //swapped parameters so func will check for ALL required answers vs just selection
+                    shallowEqual(eachQuestion.answer, values[index])
+                  }
+                />
+              }
+            />
+          );
+        })}
 
-          <Route
-            path="/resultsPage"
-            element={
-              <ResultsPage
-                playerName={playerName}
-                resetName={resetName}
-                resetRadioButtons={resetRadioButtons}
-                finalScore={currentScore}
-                bestScore={bestScore}
-                compareScore={compareScore}
-              />
-            }
-          />
-        </Routes>
-      </BrowserRouter>
-    </div>
+        <Route
+          path="/resultsPage"
+          element={
+            <ResultsPage
+              playerName={playerName}
+              resetName={resetName}
+              resetRadioButtons={resetRadioButtons}
+              finalScore={currentScore}
+              bestScore={bestScore}
+              compareScore={compareScore}
+            />
+          }
+        />
+      </Routes>
+    </BrowserRouter>
   );
 }

@@ -1,11 +1,13 @@
 import React from "react";
-import "../CustomButton/style.css";
+import "../../style.css";
 
 const SubmitButton = (props) => {
   return (
-    <button type="submit" className="styleButton" disabled={props.disabled}>
-      {props.children}
-    </button>
+    <div className="buttonContainer">
+      <button type="submit" className="styleButton" disabled={props.disabled}>
+        {props.children}
+      </button>
+    </div>
   );
 };
 
