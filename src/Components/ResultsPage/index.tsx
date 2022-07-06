@@ -58,7 +58,7 @@ const ResultsPage = (props) => {
       <br />
       <h4>
         Your best score so far was {props.bestScore} out of 5 questions which
-        you got on [date].
+        you got on {new Date().toLocaleDateString()}.
       </h4>
       <CustomButton nextPage="/question1" onClick={props.resetRadioButtons}>
         Try Again

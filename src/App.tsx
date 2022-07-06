@@ -46,7 +46,6 @@ export default function App(props) {
       : currentScore;
   }
   function compareScore() {
-    //score-number    bestScore-object
     if (currentScore > bestScore) {
       setBestScores(({ ...previousBestScores }) => {
         previousBestScores[playerName] = currentScore;
