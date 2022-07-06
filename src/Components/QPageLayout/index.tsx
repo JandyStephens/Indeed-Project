@@ -7,8 +7,10 @@ import SingleAnswerForm from "../SingleAnswerForm";
 const QPageLayout = (props) => {
   return (
     <div className="container">
-      <QuestionCounter>{props.counter}</QuestionCounter>
-      <ScoreTracker>{props.scoreTracker}</ScoreTracker>
+      <div className="topBar">
+        <QuestionCounter>{props.counter}</QuestionCounter>
+        <ScoreTracker>{props.scoreTracker}</ScoreTracker>
+      </div>
 
       {typeof props.question.answer === "string" ? (
         <SingleAnswerForm
